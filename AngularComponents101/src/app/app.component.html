@@ -2,11 +2,12 @@
   <app-progress-bar [progress]="counterProgress"></app-progress-bar>
   <app-countdown #countdown
     [init]="totalCountdown"
-    (onDrecrease)="updateProgress($event)"
-    (onComplete)="countdownFinished()"></app-countdown>
-    <div class="initInput">
-      <label for="totalCountdown">Init on: </label>
-      <input id="totalCoutdown" type="text" [(ngModel)]="totalCountdown">
-    </div>
-    <button (click)="countdown.startCountdown(); counterProgress = 0;">Restart</button>
+    (onComplete)="countdownFinished()"
+    (onDecrease)="updateProgress($event)">
+  </app-countdown>
+  <div class="initInput">
+    <label for="totalCountdown">Init on: </label>
+    <input id="totalCountdown" type="text" [(ngModel)]="totalCountdown">
+  </div>
+  <button (click)="countdown.startCountdown(); countdown.counterProgress = 0;">Restart</button>
 </h1>
