@@ -17,6 +17,7 @@
   "author": "Edwin Mantilla <hackpro.ems@gmail.com> (https://github.com/HackproTm)",
   "license": "MIT",
   "dependencies": {
+    "jasmine-spec-reporter": "^4.2.1",
     "protractor": "^5.4.1"
   },
   "devDependencies": {
